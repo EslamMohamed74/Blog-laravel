@@ -20,3 +20,14 @@ Route::get('/posts/{post}/edit', 'PostController@edit')->name('posts.edit');
 
 Route::put('/posts/{posts}', 'PostController@update');
 Route::DELETE('/posts/{posts}', 'PostController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
