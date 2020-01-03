@@ -12,7 +12,9 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Title</th>
+        <th scope="col">Slug Title</th>
         <th scope="col">description</th>
+        <th scope="col">Creted by</th>
         <th scope="col">Creted at</th>
         <th scope="col">Actions</th>
       </tr>
@@ -22,7 +24,9 @@
       <tr>
         <th scope="row">{{$value['id']}}</th>
         <td>{{$value['title']}}</td>
+        <td>{{$value['slug']}}</td>
         <td>{{$value['description']}}</td>
+        <td>{{$value->user->name}}</td>
         <td>{{$value['created_at']->format("yy-m-d")}}</td>
         <td>
           <a class="btn btn-info" href="{{route('posts.show',['post' => $value['id'] ])}}">View</a>
