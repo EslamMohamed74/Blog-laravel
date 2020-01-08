@@ -23,16 +23,9 @@ class StorePost extends FormRequest
      */
     public function rules()
     {
-        if($this->method() == "PUT"){
-            $title = "required|min:3|unique:posts,title,".$this->posts;
-            $description = 'required|min:10';
-        }else{
-            $title = "required|min:3|unique:posts,title";
-            $description = 'required|min:10';
-        }
         return [
-            'title' => $title,
-            'description' => $description,
+            'title' => "required|min:3|unique:posts,title,".$this->posts,
+            'description' => 'required|min:10',
         ];
     }
 }
